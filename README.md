@@ -60,10 +60,10 @@
       }
       .swal2-custom-popup {
         width: 25em; /* Reduce the width of the popup */
-        font-size: 1em; /* Adjust the font size within the popup */
+        font-size: 0.5em; /* Adjust the font size within the popup */
       }
       .swal2-custom-content {
-        font-size: 1em; /* Increase the font size of the content */
+        font-size: 0.5em; /* Increase the font size of the content */
       }
     </style>
   </head>
