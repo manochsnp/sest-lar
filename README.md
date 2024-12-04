@@ -141,7 +141,6 @@
         <input type="date" id="endDate" name="ถึงวันที่" class="form-select" required>
       </div>  
       <button type="submit" name="submit" value="Send message" class="btn btn-primary">บันทึก</button>
-    </form>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -198,5 +197,3 @@
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
-</html>
