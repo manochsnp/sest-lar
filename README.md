@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Form test</title>
@@ -12,7 +13,7 @@
         background-color: #f4f4f9;
       }
       .container {
-        max-width: 87%;
+        max-width: 100%;
         background-color: #fff;
         padding: 2em;
         border-radius: 50px;
@@ -61,18 +62,17 @@
       }
       .swal2-custom-popup {
         width: 25em; /* Reduce the width of the popup */
-        font-size: 1.6em; /* Adjust the font size within the popup */
+        font-size: 1em; /* Adjust the font size within the popup */
       }
       .swal2-custom-content {
-        font-size: 2em; /* Increase the font size of the content */
+        font-size: 1em; /* Increase the font size of the content */
       }
     </style>
   </head>
 <body>
-  <div class="pt-4"></div>
+  <div class="pt-1"></div>
   <div class="container">
     <div>
-      <h1 class="text-center">แบบบันทึกการลา</h1>
       <h3 class="text-center">โรงเรียนสูงเนินพิทยาคม</h3>
     </div>
     <form method="post" autocomplete="off" name="hello-sheet">
@@ -141,6 +141,7 @@
         <input type="date" id="endDate" name="ถึงวันที่" class="form-select" required>
       </div>  
       <button type="submit" name="submit" value="Send message" class="btn btn-primary">บันทึก</button>
+    </form>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -197,3 +198,5 @@
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
