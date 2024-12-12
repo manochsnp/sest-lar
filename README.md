@@ -1,197 +1,247 @@
-<head>
-    <title>Form test</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-      body {
-        font-family: 'Roboto', sans-serif;
-        font-size: 3em;
-        background-color: #f4f4f9;
-      }
-      .container {
-        max-width: 100%;
-        background-color: #fff;
-        padding: 2em;
-        border-radius: 50px;
-        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-      }
-      .form-control, .form-select {
-        font-size: 1em;
-        margin-bottom: 1em;
-        border-radius: 30px; /* Add rounded corners to input fields */
-      }
-      .form-select {
-        width: 100%; /* Increased width */
-        padding: 0.5em;
-        border: 1px solid #ced4da;
-        appearance: none;
-        background-color: #fff;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="none" stroke="rgba(0, 0, 0, 0.25)" stroke-width="1" d="M2 0 L0 2 L4 2 Z"/></svg>');
-        background-repeat: no-repeat;
-        background-position: right 0.75em center;
-        background-size: 8px 10px;
-      }
-      .btn {
-        font-size: 1.5em;
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        background-color: #007bff;
-        border: none;
-        border-radius: 30px;
-      }
-      .btn:hover {
-        background-color: #0056b3;
-      }
-      h1 {
-        color: #333;
-        text-align: center;
-        margin-bottom: 0.1em; /* Reduced margin-bottom */
-        font-size: 1.5em;
-      }
-      h3 {
-        color: #333;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 0.1em; /* Reduced margin-bottom */
-        font-size: 1.2em;
-      }
-      .swal2-custom-popup {
-        width: 25em; /* Reduce the width of the popup */
-        font-size: 0.5em; /* Adjust the font size within the popup */
-      }
-      .swal2-custom-content {
-        font-size: 0.5em; /* Increase the font size of the content */
-      }
-    </style>
-  </head>
-<body>
-  <div class="pt-1"></div>
-  <div class="container">
-    <div>
-      <h3 class="text-center">โรงเรียนสูงเนินพิทยาคม</h3>
-    </div>
-    <form method="post" autocomplete="off" name="hello-sheet">
-      <div class="form-group">
-        <label for="ชื่อ-สกุล">ชื่อ สกุล</label>
-        <div class="form-group">
-          <select id="ชื่อ-สกุล" name="ชื่อ-สกุล" class="form-select" required>
-            <option value=""></option>
-            <option value="นางรภัทภร สิทธิวงศ์">นางรภัทภร สิทธิวงศ์</option>
-            <option value="นางณัฐิยา ดาราย้อย">นางณัฐิยา ดาราย้อย</option>
-            <option value="นางสาวกานดา เก็จรัมย์">นางสาวกานดา เก็จรัมย์</option>
-            <option value="นายจิรศักดิ์ ยอดชะลูด">นายจิรศักดิ์ ยอดชะลูด</option>
-            <option value="นางฐิติรัตน์ ดำรงค์">นางฐิติรัตน์ ดำรงค์</option>
-            <option value="นางสาวดวงสมร ช่วงชัย">นางสาวดวงสมร ช่วงชัย</option>
-            <option value="นายจิรวัฒน์ ดีล้อม">นายจิรวัฒน์ ดีล้อม</option>
-            <option value="นายนิติศักดิ์ หนองเรือง">นายนิติศักดิ์ หนองเรือง</option>
-            <option value="นายพีระพล ศรีวงสุข">นายพีระพล ศรีวงสุข</option>
-            <option value="นางศรินภา เชียนรัมย์ มอบยิ่ง">นางศรินภา เชียนรัมย์ มอบยิ่ง</option>
-            <option value="นายคมกริช โฉมงาม">นายคมกริช โฉมงาม</option>
-            <option value="นางสาวปริชญา สีหานู">นางสาวปริชญา สีหานู</option>
-            <option value="นางสาวกานต์ติมา ทองน้อย">นางสาวกานต์ติมา ทองน้อย</option>
-            <option value="นางสาวสุภาวรรณ ดำเสนา">นางสาวสุภาวรรณ ดำเสนา</option>
-            <option value="นายมาโนช เจริญยิ่ง">นายมาโนช เจริญยิ่ง</option>
-            <option value="นางสาวสุนิษา สัตบุตร">นางสาวสุนิษา สัตบุตร</option>
-            <option value="นางวิภารัตน์ จันทะนุภา">นางวิภารัตน์ จันทะนุภา</option>
-            <option value="นางสาวศันสนีย์ หมายดี">นางสาวศันสนีย์ หมายดี</option>
-            <option value="นายอรรณพ เการัมย์">นายอรรณพ เการัมย์</option>
-            <option value="นายธีรพงษ์ บุษยงค์">นายธีรพงษ์ บุษยงค์</option>
-            <option value="นางสาวกมลลักษณ์ ยอดเครือ">นางสาวกมลลักษณ์ ยอดเครือ</option>
-          </select>
-        </div>
-      <div class="form-group">
-        <label for="ประเภทการลา">ประเภทการลา</label>
-        <div class="form-group">
-        <select id="leaveType" name="ประเภทการลา" class="form-select" required>
-              <option value=""></option>
-              <option value="ลาป่วย">ลาป่วย</option>
-              <option value="ลากิจ">ลากิจ</option>
-              <option value="ลาคลอด">ลาคลอด</option>
-              <option value="ลาบวช">ลาบวช</option>
-              <option value="ลาอื่นๆ">ลาอื่นๆ</option>
-        </select>
-        </div>
-      <div class="form-group">
-        <label for="เนื่องจาก">เนื่องจาก</label>
-        <input type="text" class="form-control" placeholder="" name="เนื่องจาก">
-      </div>
-      <div class="form-group">
-        <label for="จำนวนวันลา">จำนวนวันลา</label>
-        <div class="form-group">
-          <select id="leaveDays" name="จำนวนวันลา" class="form-select" required>
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-          </select>
-      </div>
-      <div class="form-group">
-        <label for="เริ่มวันที่">เริ่มวันที่</label>
-        <input type="date" id="startDate" name="เริ่มวันที่" class="form-select" required>
-      </div>  
-      <div class="form-group">
-        <label for="ถึงวันที่">ถึงวันที่</label>
-        <input type="date" id="endDate" name="ถึงวันที่" class="form-select" required>
-      </div>  
-      <button type="submit" name="submit" value="Send message" class="btn btn-primary">บันทึก</button>
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbw3c4H3wOmuvn3KyoXPT7BSqwob7P2pasXN7AeG1MMDcKiQr84PTODy2QPbqhzEJpjdNw/exec';
-      const form = document.forms['hello-sheet'];
+<!DOCTYPE html>
+<html>
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        Swal.fire({
-          title: 'กรุณารอสักครู่',
-          text: 'ระบบกำลังประมวลผล...',
-          icon: 'info',
-          allowOutsideClick: false,
-          customClass: {
-            popup: 'swal2-custom-popup',
-            content: 'swal2-custom-content'
-          },
-          didOpen: () => {
-            Swal.showLoading();
-          }
+<head>
+	<base target="_top">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+		integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<!-- Font Awesome CSS -->
+	<script src="https://kit.fontawesome.com/6a972cf3a7.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style>
+		body {
+			font-family: "Mitr"
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-md-auto mx-auto">
+
+				<nav class="navbar navbar-expand-sm navbar-dark bg-danger flex-sm-nowrap flex-wrap">
+					<div class="container-fluid">
+						<button class="navbar-toggler flex-grow-sm-1 flex-grow-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar5">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+						<span class="navbar-brand flex-grow-1"><i class="far fa-address-card"></i> ฟอร์มบันทึกข้อมูล</span>
+						<div class="navbar-collapse collapse flex-grow-1 justify-content-center" id="navbar5">
+							<ul class="navbar-nav mx-auto">
+								<li class="nav-item">
+									<i class="fas fa-home mr-2"></i>กลับหน้าหลัก</a>
+								</li>
+							</ul>
+						</div>
+						<div class="flex-grow-1">
+							<!--spacer-->
+						</div>
+					</div>
+				</nav>
+
+				<div class="card">
+					<div class="card-header bg-info text-light">
+						โรงเรียนอภิวัฒน์สอนสร้างสื่อ
+					</div>
+					<div class="card-body">
+
+						<form class="main" id="form" novalidate="novalidate"
+							style="max-width: 600px;margin: 20px auto;">
+							<div id="forminner">
+								<div class="form-row">
+									<div class="form-group col-md-auto">
+										<label for="id">เลขประจำตัวประชาชน</label>
+										<input type="text area" class="form-control" id="id" name="id" maxlength="13" placeholder="เลขประจำตัวประชาชน">
+                        </div>
+										<div class="form-group col-md-auto">
+											<label for="stdCode">เลขประจำตัวนักเรียน</label>
+											<input type="text area" class="form-control" id="stdCode" name="stdCode" maxlength="6" placeholder="เลขประจำตัวนักเรียน">
+                        </div>
+											<div class="form-group col-md-auto">
+												<label for="firstname">ชื่อ</label>
+												<input type="text area" class="form-control" id="firstname" name="firstname" maxlength="80" placeholder="ชื่อ">
+                        </div>
+												<div class="form-group col-md-auto">
+													<label for="lastname">นามสกุล</label>
+													<input type="text area" class="form-control" id="lastname" name="lastname" maxlength="80" placeholder="นามสกุล">
+                        </div>
+													<div class="form-group col-md-auto">
+														<label for="address">ที่อยู่</label>
+														<input type="text area" class="form-control" id="address" name="address" maxlength="200" placeholder="ที่อยู่ปัจจุบัน">
+                        </div>
+														<div class="form-group col-md-auto">
+															<label for="tel">เบอร์โทรศัพท์</label>
+															<input type="text" class="form-control" id="tel" name="tel" maxlength="10" placeholder="xxx-xxxxxxx">
+                        </div>
+															<div class="form-group col-md-auto">
+																<label for="email">อีเมล์</label>
+																<input type="text" class="form-control" id="email" name="email" maxlength="50" placeholder="อีเมล์">
+                        </div>
+
+																<!--อัปโหลดรูภาพ-->
+																<div class="row">
+																	<div class="form-group col-md-auto">
+																		<span>เลือกรูปภาพ</span>
+																		<div class="btn">
+
+																			<input id="files" type="file">
+                        </div>
+																		</div>
+																	</div>
+																	<div class="row justify-content-center">
+																		<div class="input-field col s6 text-center">
+																			<button type="submit" class="btn btn-danger mb-2" id="button" onclick="submitForm(); return false;">
+                            บันทึกข้อมูล
+                        </button>
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+						</form>
+
+						<div >
+							<div id="success" style="display:none">
+								<h4 class="left-align teal-text">
+									<center>
+บันทึกข้อมูลเรียบร้อย!
+									</center>
+								</h4>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
         });
-        try {
-          const response = await fetch(scriptURL, {
-            method: 'POST',
-            body: new FormData(form)
-          });
-          if (response.ok) {
-            Swal.fire({
-              title: 'สำเร็จ!',
-              text: 'บันทึกข้อมูลเรียบร้อยแล้ว',
-              icon: 'success',
-              confirmButtonText: 'ตกลง',
-              customClass: {
-                popup: 'swal2-custom-popup'
-              }
-            }).then(() => {
-              form.reset(); // Reset form fields after the alert is confirmed
-            });
-          } else {
-            throw new Error('Network response was not ok');
-          }
-        } catch (error) {
-          Swal.close(); // ปิดข้อความรอ
-          Swal.fire({
-            title: 'เกิดข้อผิดพลาด!',
-            text: 'ไม่สามารถบันทึกข้อมูลได้',
-            icon: 'error',
-            confirmButtonText: 'ตกลง'
-          });
-          console.error('Error!', error.message);
+        var file, reader = new FileReader();
+        reader.onloadend = function (e) {
+            if (e.target.error != null) {
+                showError("File " + file.name + " could not be read.");
+                return;
+            } else {
+                google.script.run
+                    .withSuccessHandler(showSuccess)
+                    .uploadFile(e.target.result, file.name,
+                        $('input#id').val(),
+                        $('input#stdCode').val(),
+                        $('input#firstname').val(),
+                        $('input#lastname').val(),
+                        $('input#address').val(),
+                        $('input#tel').val(),
+                        $('input#email').val()
+                        
+                    );
+            }
+        };
+        function showSuccess(e) {
+            if (e === "OK") {
+                $('#forminner').hide();
+                $('#success').show();
+                $('#image').hide();
+                
+            } else {
+                showError(e);
+            }
         }
-      });
-    });
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        function restartForm() {
+            $('#form').trigger("reset");
+            $('#forminner').show();
+            $('#success').hide();
+            $('#button').show();
+        }
+        
+        function submitForm() {
+            var id= $('input#id').val();
+            if (id.length === 0) {
+                showError("กรุณากรอกเลขประจำตัวประชาชน");
+                return;
+            }
+            var stdCode = $('input#stdCode').val();
+            if (stdCode.length === 0) {
+                showError("กรุณากรอกเลขประจำตัวนักเรียน");
+                return;
+            }            
+            var firstname = $('input#firstname').val();
+            if (firstname.length === 0) {
+                showError("กรุณากรอกชื่อ");
+                return;
+            }
+            var lastname = $('input#lastname').val();
+            if (lastname.length === 0) {
+                showError("กรุณากรอกนามสกุล");
+                return;
+            }
+            var add = $('input#address').val();
+            if (add.length === 0) {
+                showError("กรุณากรอกที่อยู่ปัจจุบัน");
+                return;
+            }
+            var tel = $('input#tel').val();
+            if (tel.length === 0) {
+                showError("กรุณากรอกหมายเลขโทรศัพท์");
+                return;
+            }
+            
+            var files = $('#files')[0].files;
+            if (files.length === 0) {
+                showError("กรุณาเลือกไฟล์ภาพ");
+                return;
+            }
+            document.getElementById("button").style.display = "none"
+            file = files[0];
+            if (file.size > 1024 * 1024 * 20) {
+                showError("The file size should be < 20 MB. ");
+                return;
+            }
+            showMessage("...ระบบกำลังบันทึกข้อมูล...");
+            reader.readAsDataURL(file);
+        }
+        function showError(e) {
+            Swal.fire({
+                title: 'คุณกรอกข้อมูลยังไม่ครบ!',
+                text: e,
+                icon: 'error',
+                confirmButtonText: 'ตกลง'
+            })
+        }
+        function showMessage(e) {
+            Swal.fire({
+                title: '...กรุณารอสักครู...',
+                text: '...ระบบกำลังบันทึกข้อมูล...',
+                showConfirmButton: false,
+              timer: 3000
+            })
+        }
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+        document.getElementById("files").onchange = function () {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById("image").src = e.target.result;
+                $('#image').show();
+            };
+            reader.readAsDataURL(this.files[0]);
+        };
+	</script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+
+</html>
